@@ -7,14 +7,14 @@ import Footer from './components/Layout/Footer'
 function App () {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
+      <div className="App" data-test="component-app">
+        <Header data-test="header-app" />
         <Switch>
           <Route path="/register" component={RegistrationForm} />
         </Switch>
         <main><div className="container"></div></main>
       </div>
-      <Footer />
+      <Footer data-test="footer-app" />
     </BrowserRouter>
   )
 }
