@@ -11,10 +11,10 @@ Enzyme.configure({ adapter: new EnzymeAdapter() })
  * @param {object} props - Component props specific to the setup.
  * @param {object} state - Initial state for the set up
  * @returns {ShallowWrapper}
-*/
+ */
 
 const setup = (props = {}, state = null) => {
-  const wrapper = shallow(<App {...props}/>)
+  const wrapper = shallow(<App {...props} />)
   if (state) wrapper.setState(state)
   return wrapper
 }
@@ -41,10 +41,4 @@ test('renders header', () => {
   const wrapper = setup()
   const headerComponent = findByTestAttr(wrapper, 'header-app')
   expect(headerComponent.length).toBe(1)
-})
-
-test('renders footer', () => {
-  const wrapper = setup()
-  const footerComponent = findByTestAttr(wrapper, 'footer-app')
-  expect(footerComponent.length).toBe(1)
 })
