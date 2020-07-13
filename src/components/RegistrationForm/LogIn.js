@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import M from 'materialize-css'
 
-const RegistrationForm = () => {
+const LogIn = () => {
   useEffect(() => {
     M.AutoInit()
   }, [])
   const [values, setValues] = useState({
-    name: '',
     email: '',
     password: '',
     error: '',
     success: false
   })
 
-  const { name, email, password, error, success } = values
+  const { email, password, error, success } = values
 
   // handle changes
   const handleChange = (name) => (e) => {
@@ -76,16 +75,6 @@ const RegistrationForm = () => {
               <label htmlFor="email">Your Email</label>
             </div>
             <div className="input-field">
-              <i className="material-icons prefix">tag_faces</i>
-              <input
-                onChange={handleChange('name')}
-                type="text"
-                id="name"
-                value={name}
-              />
-              <label htmlFor="name">Your Name</label>
-            </div>
-            <div className="input-field">
               <i className="material-icons prefix">vpn_key</i>
               <input
                 onChange={handleChange('password')}
@@ -100,26 +89,6 @@ const RegistrationForm = () => {
                 Submit
               </button>
             </div>
-            <div className="input-field center">
-              <button
-                className="btn waves-effect waves-light red darken-1"
-                type="submit"
-                name="action"
-              >
-                Continue with Google
-                <i className="material-icons right">send</i>
-              </button>
-            </div>
-            <div className="input-field center">
-              <button
-                className="btn waves-effect waves-light grey darken-4"
-                type="submit"
-                name="action"
-              >
-                Continue with Github
-                <i className="material-icons right">send</i>
-              </button>
-            </div>
           </form>
         </div>
       </div>
@@ -127,4 +96,4 @@ const RegistrationForm = () => {
   )
 }
 
-export default withRouter(RegistrationForm)
+export default withRouter(LogIn)

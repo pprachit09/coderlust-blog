@@ -1,5 +1,6 @@
 import React from 'react'
 import RegistrationForm from './RegistrationForm'
+import LogIn from './LogIn'
 
 const FormLayout = () => {
   return (
@@ -7,9 +8,21 @@ const FormLayout = () => {
       <div className="row">
         <div className="col s12 m6 l8">
           <div className="card teal darken-1">
+            <div className="card-tabs">
+              <ul className="tabs tabs-fixed-width orange lighten-5">
+                <li className="tab"><a href="#signup" className="blue-text text-darken-4">Sign up</a></li>
+                <li className="tab"><a href="#login" className="blue-text text-darken-4">Log in</a></li>
+              </ul>
+            </div>
             <div className="card-content white-text">
-              <span className="card-title center">One Stop to go ahead</span>
-              <RegistrationForm />
+              <div id="signup">
+                <span className="card-title center">One Stop to go ahead</span>
+                <RegistrationForm />
+              </div>
+              <div id="login">
+                <span className="card-title center">Log in here to continue</span>
+                <LogIn />
+              </div>
             </div>
           </div>
         </div>
