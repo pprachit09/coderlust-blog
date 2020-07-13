@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './components/Layout/Header'
-import RegistrationForm from './components/RegistrationForm/RegistrationForm'
-import Footer from './components/Layout/Footer'
+import FormLayout from './components/RegistrationForm/FormLayout'
 
 function App () {
   return (
@@ -10,11 +9,12 @@ function App () {
       <div className="App" data-test="component-app">
         <Header data-test="header-app" />
         <Switch>
-          <Route path="/register" component={RegistrationForm} />
+          <Route path="/register" component={FormLayout} />
         </Switch>
-        <main><div className="container"></div></main>
+        <main>
+          <div className="container"></div>
+        </main>
       </div>
-      <Footer data-test="footer-app" />
     </BrowserRouter>
   )
 }
