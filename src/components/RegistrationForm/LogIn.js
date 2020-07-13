@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
-import M from 'materialize-css'
 
 const LogIn = () => {
-  useEffect(() => {
-    M.AutoInit()
-  }, [])
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -69,20 +65,20 @@ const LogIn = () => {
               <input
                 onChange={handleChange('email')}
                 type="email"
-                id="email"
+                id="loginemail"
                 value={email}
               />
-              <label htmlFor="email">Your Email</label>
+              <label htmlFor="loginemail">Your Email</label>
             </div>
             <div className="input-field">
               <i className="material-icons prefix">vpn_key</i>
               <input
                 onChange={handleChange('password')}
                 type="password"
-                id="password"
+                id="loginpassword"
                 value={password}
               />
-              <label htmlFor="password">Your Password</label>
+              <label htmlFor="loginpassword">Your Password</label>
             </div>
             <div className="input-field center">
               <button onClick={handleSubmit} className="btn indigo accent-4">
