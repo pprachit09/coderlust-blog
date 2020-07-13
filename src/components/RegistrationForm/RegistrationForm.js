@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
-import M from 'materialize-css'
 
 const RegistrationForm = () => {
-  useEffect(() => {
-    M.AutoInit()
-  }, [])
   const [values, setValues] = useState({
     name: '',
     email: '',

@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import RegistrationForm from './RegistrationForm'
 import LogIn from './LogIn'
+import M from 'materialize-css'
 
 const FormLayout = () => {
+  useEffect(() => {
+    M.AutoInit()
+    console.log('hit')
+  }, [])
   return (
     <div className="container">
       <div className="row">
